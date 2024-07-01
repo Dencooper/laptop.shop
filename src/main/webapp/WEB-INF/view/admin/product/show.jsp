@@ -24,9 +24,9 @@
                             <h1 class="mt-4">Manage Products</h1>
                             <ol class="breadcrumb mb-4">
                                 <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
-                                <li class="breadcrumb-item active">Products</li>
+                                <li class="breadcrumb-item active">Product</li>
                             </ol>
-                            <!-- <div class="mt-5">
+                            <div class="mt-5">
                                 <div class="row">
                                     <div class="col-12 mx-auto">
                                         <div class="d-flex justify-content-between">
@@ -41,19 +41,17 @@
                                                     <th>ID</th>
                                                     <th>Name</th>
                                                     <th>Price</th>
-                                                    <th>Short description</th>
-                                                    <th>Quantity</th>
+                                                    <th>Factory</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <c:forEach var="product" items="${product}">
-
+                                                <c:forEach var="product" items="${products}">
                                                     <tr>
                                                         <th>${product.id}</th>
-                                                        <td>${product.email}</td>
-                                                        <td>${product.fullName}</td>
-                                                        <td>${product.role.name}</td>
+                                                        <td>${product.name}</td>
+                                                        <td>${product.price}</td>
+                                                        <td>${product.factory}</td>
                                                         <td>
                                                             <a href="/admin/product/${product.id}"
                                                                 class="btn btn-success">View</a>
@@ -72,7 +70,7 @@
 
                                 </div>
 
-                            </div> -->
+                            </div>
                         </div>
                     </main>
                     <jsp:include page="../layout/footer.jsp" />
@@ -81,6 +79,7 @@
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
                 crossorigin="anonymous"></script>
             <script src="/js/scripts.js"></script>
+
         </body>
 
         </html>
