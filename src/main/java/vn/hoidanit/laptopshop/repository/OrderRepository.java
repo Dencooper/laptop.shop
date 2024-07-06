@@ -5,9 +5,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import vn.hoidanit.laptopshop.domain.Product;
+import vn.hoidanit.laptopshop.domain.Order;
 
 @Repository
-public interface ProductRepository extends JpaRepository<Product, Long> {
-    Page<Product> findAll(Pageable pageable);
+public interface OrderRepository extends JpaRepository<Order, Long> {
+    Page<Order> findAll(Pageable pageable);
 }
